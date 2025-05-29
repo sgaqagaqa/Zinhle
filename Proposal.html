@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Girlfriend?</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      color: #d6336c;
+    }
+    h3 {
+      font-size: 2.8em;
+      color: #c53466;
+    }
+
+    p {
+      font-size: 1.3em;
+      color: #333;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .poem {
+      font-style: italic;
+      margin-top: 30px;
+      color: #555;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .yes-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .yes-btn:hover {
+      background-color: #218838;
+    }
+
+    .no-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .no-btn:hover {
+      background-color: #c82333;
+    }
+
+    #confetti-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    #funny-response {
+      display: none;
+      font-size: 1.2em;
+      margin-top: 40px;
+      color: #555;
+    }
+
+    #crying-gif {
+      max-width: 300px;
+      margin-top: 20px;
+    }
+
+    .slideshow-container {
+      max-width: 500px;
+      margin: 40px auto;
+      position: relative;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #444;
+    }
+
+    /* Love Note Modal */
+    #love-note {
+      display: none;
+      position: fixed;
+      top: 25%;
+      left: 10%;
+      width: 80%;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #ff69b4;
+      z-index: 999;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Say yes again</h1>
+
+  <p>
+    I don't just want to call you mine, I want to hold space for your heart, speak love in your language, and grow into the man you already believe I can be. You've touched parts of me I didn’t know needed healing. Every moment with you feels like I’m finally home.
+  </p>
+
+  <div class="poem">
+    <p><strong>Ngiyakuthanda, Sthandwa Sami</strong><br>
+    Ngiyakubona ekuseni, uthando lwami,<br>
+    Njengelanga likhanya ezintabeni.<br>
+    Izwi lakho lihlamba inhliziyo yami,<br>
+    Njengemvula ethulile ebusuku.<br>
+    Ngifisa ukukugcina phakade,<br>
+    Njengefa lothando elingapheli.</p>
+
+    <h3> 23rd May 2025 </h3>
+<p>
+    On this day, I asked you to be mine,<br>
+    I asked with a heart full of hope,<br>
+    You smiled, and my world stood still.<br>
+    A simple "yes" that changed everything,<br>
+    A promise, a journey, and a dream to fulfill. 💖
+  </p>
+  </div>
+
+  <!-- Image slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="smile.jpeg" alt="Picture 1">
+      <div class="caption">Our first smile together ❤️</div>
+    </div>
+    <div class="mySlides">
+      <img src="sushiqueen.jpeg" alt="Picture 2">
+      <div class="caption">My fav Photo of you </div>
+    </div>
+    <div class="mySlides">
+      <img src="pout.jpeg" alt="Picture 3">
+      <div class="caption">Kisses💋</div>
+    </div>
+    <div class="mySlides">
+      <img src="imama.jpeg" alt="Picture 4">
+      <div class="caption">Mamakhe 🧎🏾‍♂️ </div>
+    </div>
+    <div class="mySlides">
+      <img src="bite.jpeg" alt="Picture 5">
+      <div class="caption">That day I knew I loved you 🫀 </div>
+    </div>
+      <div class="mySlides">
+      <img src="glasses.jpeg" alt="Picture 6">
+      <div class="caption"> 4 Eyes 👀</div>
+      </div>
+      <div class="mySlides">
+      <img src="peace.jpeg" alt="Picture 7">
+      <div class="caption">My girl sooo fynnnn 🫦</div>
+    </div>
+    </div>
+    </div>
+  </div>
+<h1>Will You Be My Girlfriend (Again) ???</h1>
+    <!-- Proposal buttons -->
+  <button class="yes-btn" onclick="sayYes()">Yes ❤️</button>
+  <button class="no-btn" onclick="sayNot()">No 🖕🏾</button>
+
+  <!-- Funny response -->
+  <div id="funny-response">
+    <p>"Msunu wakho yezwa, try again</p>
+    <img src="msunu.jpeg" alt="picture 6" width="200">
+  </div>
+
+  <!-- Love Note Modal -->
+  <div id="love-note">
+    <h2>❤️❤️You Said Yes!❤️❤️</h2>
+    <p>Guess that free trial is over now nja yam' </p><br><p>We are fully locked in now and And our journey together is about to bloom into something even more extraordinary. </br></p> <br><h3>Here’s to "forever"♾️❤️.</h3> </br></p>
+  </div>
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <script>
+    function sayYes() {
+      launchConfetti();
+      document.getElementById("love-note").style.display = "block";
+    }
+
+    function sayNot() {
+      alert("Msunu wakho yezwa (try again)");
+    }
+
+    function launchConfetti() {
+      confetti({
+        particleCount: 100,
+        spread: 100,
+        origin: { y: 0.6 },
+        shapes: ['circle'],
+        colors: ['#ff4b5c', '#ff6f91', '#ffc1cc']
+      });
+    }
+
+   
+
+   
+    // Image slideshow
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      const slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+  </script>
+</body>
+</html>
